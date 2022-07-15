@@ -2,33 +2,28 @@ namespace BreadModels
 {
   public class BreadClass
   {
-    public int BreadCount {get; set;}
-    public int BreadSubTotal {get; set;}
-
-    public int Bread(string count)
+    public int GetBreadCount(string count)
     {
-      BreadCount = int.Parse(count);
-      BreadSubTotal = 0;
-      return BreadCount;
+      int breadCount = int.Parse(count);
+      return breadCount;
     }
 
-    public int BreadCalculator()
+    public int BreadCalculator(int breadCount)
     {
-      for (int i = 0; i < BreadCount; i++)
-      {
-        BreadSubTotal += 5;
-      }
-      return BreadSubTotal;
+      int breadTotal = 0;
+      int breadCost = 5;
+      breadTotal = breadCost * breadCount;
+      return breadTotal;
     }
 
-    public int BreadDealCalculator()
+    public int BreadDealCalculator(int breadTotal, int breadCount)
     {
-      if (BreadCount >= 3)
+      if (breadCount >= 3)
       {
-        int BreadDeal = BreadCount / 3;
-        BreadSubTotal -= (BreadDeal * 5);
+        int breadDeal = breadCount / 3;
+        breadTotal -= (breadDeal * 5);
       }
-      return BreadSubTotal;
+      return breadTotal;
     }
   }
 }
