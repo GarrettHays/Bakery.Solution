@@ -1,42 +1,49 @@
-# Bakery.Solution
+# Pierre's Bakery
 
 #### By _**Garrett Hays**_
 
-#### _An application to
+#### A console program that calculates total price of a users bakery order.
 
 ## Technologies Used
 
+* C#
+* .NET
+* MSTest
 
 ## Description
 
+This is a console program that was built using C# that simulates a user's interaction with Pierre, the owner of a Bakery. 
+When the program runs, the user will be welcomed to the bakeryand given a rundown of pricing for breads and pastries. 
+Next, the user will be prompted for an input of the number of loaves of bread, and number of pastries they would like to purchase. 
+After user input is received, the program calculates the total price using two methods for each type of food.
+The program then returns the total to the user, along with the rest of the interaction. 
+
+## Necessary Tools
+
+* MSTest (optional but needed if you want to run the tests)
+* .NET (install using "dotnet tool install -g dotnet-script" in console)
 
 ## Setup/Installation Requirements
 
+* Copy the git repository url [here](https://github.com/GarrettHays/Bakery.Solution).
+* Open a shell program & navigate to your desktop.
+* Clone the repository using the "git clone" command and copied URL.
+* In the shell program, navigate to the root directory of the newly created file called "Bakery.Solution"
+* From the root directory, navigate to the directory named "Bakery"
+* Once inside the "Bakery" directory, type "dotnet run" into the console to run the program. Enjoy!
+
+## Test Instructions
+
+* Using a shell program, navigate from the root directory, "Bakery.Solution," to the "Bakery.Tests" directory.
+* Once in the "Bakery.Tests" directory, type "dotnet restore" in the console.
+* After the restore process is complete, type "dotnet test" into the console. This will run all written tests and display the test results into the console to review.
 
 ## Known Bugs
 
-
+* _No known issues_
 
 ## License
 
-_MIT License_
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.\_
+_[MIT License](license)_
 
 Copyright (c) July 15th, 2022 Garrett Hays
