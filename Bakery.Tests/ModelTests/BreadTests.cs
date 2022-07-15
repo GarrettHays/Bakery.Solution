@@ -31,7 +31,7 @@ namespace BreadTests
       Assert.AreEqual(5, newCustomer.BreadSubTotal);
     }
     [TestMethod]
-    public void AddBread_CorrectlyCalculateSalePrice_Int()
+    public void AddBread_CorrectlyCalculateDealPrice_Int()
     {
       BreadClass newCustomer = new BreadClass();
       newCustomer.Bread("3");
