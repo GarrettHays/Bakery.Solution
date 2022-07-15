@@ -20,5 +20,15 @@ namespace BreadModels
       }
       return BreadSubTotal;
     }
+
+    public int BreadDealCalculator()
+    {
+      if (BreadCount >= 3)
+      {
+        int BreadDeal = BreadCount / 3;
+        BreadSubTotal -= (BreadDeal * 5);
+      }
+      return BreadSubTotal;
+    }
   }
 }
