@@ -22,6 +22,14 @@ namespace PastryTests
       newCustomer.Pastry("1");
       Assert.AreEqual(1, newCustomer.PastryCount);
     }
+    [TestMethod]
+    public void AddPastry_AddPastryPrices_Int()
+    {
+      PastryClass newCustomer = new PastryClass();
+      newCustomer.Pastry("1");
+      newCustomer.PastryCalculator();
+      Assert.AreEqual(2, newCustomer.PastrySubTotal);
+    }
   }
 } 
 //     [TestMethod]
