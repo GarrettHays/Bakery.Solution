@@ -30,6 +30,15 @@ namespace BreadTests
       newCustomer.BreadCalculator();
       Assert.AreEqual(5, newCustomer.BreadSubTotal);
     }
+    [TestMethod]
+    public void AddBread_CorrectlyCalculateSalePrice_Int()
+    {
+      BreadClass newCustomer = new BreadClass();
+      newCustomer.Bread("3");
+      newCustomer.BreadCalculator();
+      newCustomer.BreadDealCalculator();
+      Assert.AreEqual(10, newCustomer.BreadSubTotal);
+    }
   }
 } 
 
