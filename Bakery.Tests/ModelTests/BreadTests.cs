@@ -22,6 +22,14 @@ namespace BreadTests
       newCustomer.Bread("1");
       Assert.AreEqual(1, newCustomer.BreadCount);
     }
+    [TestMethod]
+    public void AddBread_AddBreadPrices_Int()
+    {
+      BreadClass newCustomer = new BreadClass();
+      newCustomer.Bread("1");
+      newCustomer.BreadCalculator();
+      Assert.AreEqual(5, newCustomer.BreadSubTotal);
+    }
   }
 } 
 
