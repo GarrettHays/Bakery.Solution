@@ -34,10 +34,10 @@ namespace PastryTests
     public void AddPastry_CorrectlyCalculateDealPrice_Int()
     {
       PastryClass newCustomer = new PastryClass();
-      newCustomer.Pastry("6");
+      newCustomer.Pastry("3");
       newCustomer.PastryCalculator();
       newCustomer.PastryDealCalculator();
-      Assert.AreEqual(10, newCustomer.PastrySubTotal);
+      Assert.AreEqual(5, newCustomer.PastrySubTotal);
     }
   }
 } 
