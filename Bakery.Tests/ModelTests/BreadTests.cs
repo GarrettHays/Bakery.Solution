@@ -12,68 +12,32 @@ namespace BreadTests
     public void ItemConstructor_CreateBreadObject_CustomerBread()
     {
       BreadClass newCustomer = new BreadClass();
-      newCustomer.Bread("1");
+      newCustomer.GetBreadCount("1");
       Assert.AreEqual(typeof(BreadClass), newCustomer.GetType());
     }
     [TestMethod]
     public void ItemConstructor_CorrectlyParseString_int()
     {
       BreadClass newCustomer = new BreadClass();
-      newCustomer.Bread("1");
-      Assert.AreEqual(1, newCustomer.BreadCount);
+      int breadCount = newCustomer.GetBreadCount("1");
+      Assert.AreEqual(1, breadCount);
     }
     [TestMethod]
     public void AddBread_AddBreadPrices_Int()
     {
       BreadClass newCustomer = new BreadClass();
-      newCustomer.Bread("1");
-      newCustomer.BreadCalculator();
-      Assert.AreEqual(5, newCustomer.BreadSubTotal);
+      int breadCount = newCustomer.GetBreadCount("1");
+      int breadTotal = newCustomer.BreadCalculator(breadCount);
+      Assert.AreEqual(5, breadTotal);
     }
     [TestMethod]
     public void AddBread_CorrectlyCalculateDealPrice_Int()
     {
       BreadClass newCustomer = new BreadClass();
-      newCustomer.Bread("3");
-      newCustomer.BreadCalculator();
-      newCustomer.BreadDealCalculator();
-      Assert.AreEqual(10, newCustomer.BreadSubTotal);
+      int breadCount = newCustomer.GetBreadCount("3");
+      int breadTotal = newCustomer.BreadCalculator(breadCount);
+      breadTotal = newCustomer.BreadDealCalculator(breadTotal, breadCount);
+      Assert.AreEqual(10, breadTotal);
     }
   }
 } 
-
-//     [TestMethod]
-// public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
-// {
-//   // any necessary logic to prep for test; instantiating new classes, etc.
-//   Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
-  //}
-    // [TestMethod]
-    // public void ItemConstructor_CreatesInstanceOfItem_Item()
-    // {
-    //   Item newItem = new Item();
-    //   Assert.AreEqual(typeof(Item), newItem.GetType());
-    // }
-
-//     [TestMethod]
-//     public void GetDescription_ReturnsDescription_String()
-//     {
-//       string description = "Walk the dog.";
-//       Item newItem = new Item(description);
-//       string result = newItem.Description;
-//       Assert.AreEqual(description, result);
-//     }
-
-//     [TestMethod]
-// public void GetDescription_ReturnsDescription_String()
-// {
-//   //Arrange
-//   string description = "Walk the dog.";
-//   Item newItem = new Item(description);
-
-//   //Act
-//   string result = newItem.Description;
-
-//   //Assert
-//   Assert.AreEqual(description, result);
-// }
