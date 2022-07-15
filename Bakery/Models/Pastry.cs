@@ -2,38 +2,33 @@ namespace PastryModels
 {
   public class PastryClass
   {
-    public int PastryCount {get; set;}
-    public int PastrySubTotal {get; set;}
-
-    public int Pastry(string count)
+    public int GetPastryCount(string count)
     {
-      PastryCount = int.Parse(count);
-      PastrySubTotal = 0;
-      return PastryCount;
+      int pastryCount = int.Parse(count);
+      return pastryCount;
     }
 
-    public int PastryCalculator()
+    public int PastryCalculator(int pastryCount)
     {
-      for (int i = 0; i < PastryCount; i++)
-      {
-        PastrySubTotal += 2;
-      }
-      return PastrySubTotal;
+      int pastryTotal = 0;
+      int pastryCost = 2;
+      pastryTotal = pastryCost * pastryCount;
+      return pastryTotal;
     }
 
-    public int PastryDealCalculator()
+    public int PastryDealCalculator(int pastryTotal, int pastryCount)
     {
-      if (PastryCount == 6)
+      if (pastryCount == 6)
       {
-        int PastryDeal = PastryCount * 2;
-        PastrySubTotal = (PastryDeal - 2);
+        int pastryDeal = pastryCount * 2;
+        pastryTotal = (pastryDeal - 2);
       }
-      else if (PastryCount >= 3)
+      else if (pastryCount >= 3)
       {
-        int PastryDeal = PastryCount * 2;
-        PastrySubTotal = (PastryDeal - 1);
+        int pastryDeal = pastryCount * 2;
+        pastryTotal = (pastryDeal - 1);
       }
-      return PastrySubTotal;
+      return pastryTotal;
     }
   }
 }
