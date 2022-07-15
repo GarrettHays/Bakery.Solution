@@ -30,6 +30,15 @@ namespace PastryTests
       newCustomer.PastryCalculator();
       Assert.AreEqual(2, newCustomer.PastrySubTotal);
     }
+    [TestMethod]
+    public void AddPastry_CorrectlyCalculateDealPrice_Int()
+    {
+      PastryClass newCustomer = new PastryClass();
+      newCustomer.Pastry("6");
+      newCustomer.PastryCalculator();
+      newCustomer.PastryDealCalculator();
+      Assert.AreEqual(10, newCustomer.PastrySubTotal);
+    }
   }
 } 
 //     [TestMethod]
