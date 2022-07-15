@@ -15,6 +15,13 @@ namespace BreadTests
       newCustomer.Bread("1");
       Assert.AreEqual(typeof(BreadClass), newCustomer.GetType());
     }
+    [TestMethod]
+    public void ItemConstructor_CorrectlyParseString_int()
+    {
+      BreadClass newCustomer = new BreadClass();
+      newCustomer.Bread("1");
+      Assert.AreEqual(1, newCustomer.BreadCount);
+    }
   }
 } 
 

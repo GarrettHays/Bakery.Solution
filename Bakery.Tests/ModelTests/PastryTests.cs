@@ -15,6 +15,13 @@ namespace PastryTests
       newCustomer.Pastry("1");
       Assert.AreEqual(typeof(PastryClass), newCustomer.GetType());
     }
+    [TestMethod]
+    public void ItemConstructor_CorrectlyParseString_int()
+    {
+      PastryClass newCustomer = new PastryClass();
+      newCustomer.Pastry("1");
+      Assert.AreEqual(1, newCustomer.PastryCount);
+    }
   }
 } 
 //     [TestMethod]
