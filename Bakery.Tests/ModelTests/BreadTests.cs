@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using Bread.Models;
+using BreadModels;
 
-namespace Bread.Tests
+namespace BreadTests
 {
   [TestClass]
   public class BreadTests
@@ -11,8 +11,9 @@ namespace Bread.Tests
     [TestMethod]
     public void ItemConstructor_CreateBreadObject_CustomerBread()
     {
-      Bread newCustomer = new Bread("4");
-      Assert.AreEqual(typeof(Bread), newCust.GetType());
+      BreadClass newCustomer = new BreadClass();
+      newCustomer.Bread("1");
+      Assert.AreEqual(typeof(BreadClass), newCustomer.GetType());
     }
   }
 } 
