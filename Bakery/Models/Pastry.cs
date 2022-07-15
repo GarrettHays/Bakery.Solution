@@ -20,5 +20,20 @@ namespace PastryModels
       }
       return PastrySubTotal;
     }
+
+    public int PastryDealCalculator()
+    {
+      if (PastryCount == 6)
+      {
+        int PastryDeal = PastryCount * 2;
+        PastrySubTotal = (PastryDeal - 2);
+      }
+      else if (PastryCount >= 3)
+      {
+        int PastryDeal = PastryCount * 2;
+        PastrySubTotal = (PastryDeal - 1);
+      }
+      return PastrySubTotal;
+    }
   }
 }
